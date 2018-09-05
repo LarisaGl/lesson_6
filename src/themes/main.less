@@ -1,0 +1,36 @@
+/* Fonts */
+@font-regular: 'SourceSansPro-Regular';
+
+/* Colors */
+@white: #ffffff;
+@white-transparent: rgba(255, 255, 255, 0.3);
+@gray: hsl(0, 0%, 30%);
+@gray_dark: hsl(hue(@gray), 0%, 82%);
+@violet: hsl(249, 61%, 60%);
+@violet-light: hsl(hue(@violet), 79%, 70%);
+@violet-dark: hsl(hue(@violet), 42%, 42%);
+
+/* Sizes */
+@base-indent: 8px;
+@base-font-size: 19px;
+
+/* Mixin*/
+.__mixin__icon {
+  display: inline-block;
+  margin-right: @base-indent * 3;
+}
+
+.__mixin__input {
+  display: block;
+  width: @base-indent * 58.5;
+  height: @base-indent * 3;
+  border: none;
+  border-bottom: solid 1px @gray_dark;
+}
+
+.__mixin__button {
+  border: none;
+  font-family: @font-regular;
+  font-size: @base-font-size;
+  color: @white;
+}

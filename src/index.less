@@ -1,0 +1,147 @@
+@import "themes/main.less";
+
+@font-face {
+  font-family: @font-regular;
+  src: url('/fonts/SourceSansPro-Regular.ttf');
+}
+
+body {
+  display: flex;
+  margin: 0px;
+  width: auto;
+
+  @media (max-width: 1100px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.logo {
+  margin-top: @base-indent * 15.75;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__header {
+    width: @base-indent * 42.5;
+    height: @base-indent * 5.5;
+    font-family: @font-regular;
+    font-size: 35px;
+    font-weight: normal;
+    letter-spacing: 0.3px;
+    margin: 0px;
+
+    &--weight {
+      width: @base-indent * 20;
+      font-weight: 600;
+      margin-bottom: @base-indent * 13;
+    }
+  }
+}
+
+.icon {
+    width: @base-indent * 19;
+    height: @base-indent * 13;
+    background-image: url('/img/logo.png');
+    margin-bottom: @base-indent * 10 + 3;
+}
+
+.form {
+
+  &__label {
+  display: flex;
+
+    &__icon-user {
+      .__mixin__icon;
+  
+      width: @base-indent * 3 + 3;
+      height: @base-indent * 3 + 3;
+      background-image: url('/img/profile-icon.png');
+    }
+
+    &__icon-lock {
+      .__mixin__icon;
+  
+      width: @base-indent * 3 - 2;
+      height: @base-indent * 4 - 3;
+      background-image: url('/img/mask.png');
+    }
+
+    &__lab {
+      height: @base-indent * 3;
+      font-family: @font-regular;
+      font-size: @base-font-size;
+      letter-spacing: 0.2px;
+      color: @gray;
+    }
+  }
+
+  &__username {
+    .__mixin__input;
+
+    margin-bottom: @base-indent * 8;
+  }
+
+  &__password {
+    .__mixin__input;
+
+    margin-bottom: @base-indent * 2;
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    width: @base-indent * 58.5;
+    height: @base-indent * 2 + 3;
+    opacity: 0.5;
+    font-family: @font-regular;
+    font-size: 15px;
+    letter-spacing: 0.1px;
+    color: @gray;
+    text-align: right;
+    margin-bottom: @base-indent * 5;
+  }
+
+  &__submit {
+    .__mixin__button;
+
+    width: @base-indent * 18;
+    height: @base-indent * 6.25;
+    background-image: linear-gradient(109deg, @violet, @violet-light 50%, @violet-dark);
+    letter-spacing: 0.2px;
+
+    @media (max-width: 1100px) {
+      margin-bottom: 63px;
+    }
+  }
+}
+
+.picture {
+  width: @base-indent * 99.75;
+  height: @base-indent * 128;
+  background-image: url('/img/overlay-image.png');
+
+  @media (max-width: 1100px) {
+    width: 468px;
+    height: auto;
+    margin: auto;
+    background-image: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.button {
+  .__mixin__button;
+
+  width: @base-indent * 18.25;
+  height: @base-indent * 7;
+  background-color: @white-transparent;
+  text-align: center;
+  margin-top: @base-indent * 3 + 3;
+  margin-right: @base-indent * 3 + 3;
+  margin-left: @base-indent * 78;
+
+  @media (max-width: 1100px) {
+    background-image: linear-gradient(109deg, @violet, @violet-light 50%, @violet-dark);
+    margin-left: 0px;
+  }
+}
